@@ -5,7 +5,7 @@ from time import time
 
 def jack(data, stat):
     n = len(data);t = zeros(n); inds = arange(n); t0 = time()
-    # non-parametric bootstrap
+    ## 'jackknifing' by leaving out an observation for each i
     for i in range(n):
         t[i] = stat(delete(data,i) )
 
